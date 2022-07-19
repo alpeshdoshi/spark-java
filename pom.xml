@@ -14,6 +14,7 @@
         <scala.version>2.12</scala.version>
         <spark.version>3.0.0-preview2</spark.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <derby.version>10.14.2.0</derby.version>
     </properties>
 
     <dependencies>
@@ -70,6 +71,25 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>${maven-compiler-plugin.version}</version>
+        </dependency>
+
+        <!-- Database Dependencies-->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbynet</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>${derby.version}</version>
         </dependency>
     </dependencies>
 
