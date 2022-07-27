@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jmb.examples</groupId>
-    <artifactId>dataframe-basics</artifactId>
+    <artifactId>UDFs</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <scala.version>2.12</scala.version>
-        <spark.version>3.0.0-preview2</spark.version>
+        <spark.version>3.0.0</spark.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <derby.version>10.14.2.0</derby.version>
     </properties>
@@ -36,6 +36,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -119,7 +126,7 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>com.jmb.DataFrameBasicsMain</argument>
+                        <argument>com.jmb.UDFs</argument>
                     </arguments>
                 </configuration>
             </plugin>
@@ -135,7 +142,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>com.jmb.DataFrameBasicsMain</mainClass>
+                            <mainClass>com.jmb.UDFs</mainClass>
                         </manifest>
                     </archive>
 
